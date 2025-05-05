@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SecondFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+
+        <Button
+            android:id="@+id/button_second"
+            android:layout_width="101dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="264dp"
+            android:layout_marginTop="12dp"
+            android:text="@string/previous"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textview_second"
+            android:layout_width="297dp"
+            android:layout_height="145dp"
+            android:layout_marginTop="60dp"
+            android:autoSizeMaxTextSize="100sp"
+            android:autoSizeMinTextSize="20sp"
+            android:longClickable="true"
+            android:textIsSelectable="true"
+            android:selectAllOnFocus="true"
+            android:text="@string/answer_to_start"
+            android:textAlignment="center"
+            android:textSize="50sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/editTextKana"
+            android:layout_width="356dp"
+            android:layout_height="86dp"
+            android:hint="@string/kana"
+            android:imeOptions="actionSend"
+            android:inputType="text|textNoSuggestions"
+            android:singleLine="true"
+            android:text=""
+            android:textSize="24sp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_answer" />
+
+
+        <EditText
+            android:id="@+id/editTextTranslate"
+            android:layout_width="356dp"
+            android:layout_height="86dp"
+            android:inputType="text|textNoSuggestions"
+            android:text=""
+            android:textSize="24sp"
+            android:visibility="visible"
+            android:imeOptions="actionSend"
+            android:singleLine="true"
+            android:hint="@string/translate"
+            app:layout_constraintStart_toStartOf="@+id/editTextKana"
+            app:layout_constraintTop_toBottomOf="@+id/editTextKana" />
+
+        <Button
+            android:id="@+id/button_answer"
+            android:layout_width="168dp"
+            android:layout_height="71dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/answer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textview_second" />
+
+        <Button
+            android:id="@+id/button_skip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="12dp"
+            android:text="@string/skip"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textview_reveal"
+            android:layout_width="295dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="32dp"
+            android:autoSizeMaxTextSize="100sp"
+            android:autoSizeMinTextSize="20sp"
+            android:text=""
+            android:textAlignment="center"
+            android:textSize="50sp"
+            android:longClickable="true"
+            android:textIsSelectable="true"
+            android:selectAllOnFocus="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTranslate" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
